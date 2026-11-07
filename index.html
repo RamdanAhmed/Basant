@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>بسنتوتي ✨</title>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf3ee;--text:#2a1030;--muted:#7a5a72;--glass:#ffffffb8;--line:#b9852a44;--gold:#b9852a;--rose:#c2457a;--b1:#ffc9dc;--b2:#e3d4ff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c0614;--text:#fdf1f6;--muted:#c9b0c8;--glass:#ffffff12;--line:#ffd27a44;--gold:#ffd27a;--rose:#ff8fb8;--b1:#6a1b5a;--b2:#2c1a6b}}
+:root[data-theme="dark"]{--bg:#0c0614;--text:#fdf1f6;--muted:#c9b0c8;--glass:#ffffff12;--line:#ffd27a44;--gold:#ffd27a;--rose:#ff8fb8;--b1:#6a1b5a;--b2:#2c1a6b}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Cairo',sans-serif;line-height:1.9;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20%;z-index:-1;opacity:.75;background:radial-gradient(40% 40% at 22% 22%,var(--b1),transparent 70%),radial-gradient(38% 38% at 80% 72%,var(--b2),transparent 70%);animation:drift 16s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(4%,-3%) scale(1.15) rotate(6deg)}}
+.glass{background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:28px;box-shadow:0 18px 50px #0000001f}
+.btn{border:0;border-radius:50px;padding:13px 30px;font:700 1rem 'Cairo',sans-serif;color:#2a1030;background:linear-gradient(135deg,var(--gold),var(--rose));cursor:pointer;text-decoration:none;display:inline-block;transition:.3s;box-shadow:0 10px 28px #c2457a44}
+.btn:hover{transform:translateY(-3px) scale(1.05)}
+/* hero */
+.hero{max-width:1180px;margin:auto;min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:36px;padding:32px 20px}
+.txt>*{animation:rise 1s cubic-bezier(.2,.8,.2,1) both}
+.txt>*:nth-child(2){animation-delay:.15s}.txt>*:nth-child(3){animation-delay:.3s}.txt>*:nth-child(4){animation-delay:.45s}.txt>*:nth-child(5){animation-delay:.6s}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}}
+.chip{display:inline-block;padding:5px 18px;border-radius:50px;border:1px solid var(--gold);color:var(--gold);font-weight:700;font-size:.95rem}
+h1{font-family:'Aref Ruqaa',serif;font-size:clamp(3.6rem,15vw,7rem);line-height:1.15;margin:12px 0 0;background:linear-gradient(90deg,var(--gold),var(--rose),var(--gold));background-size:250%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:rise 1s both,shine 7s linear infinite}
+@keyframes shine{to{background-position:250% 0}}
+.hb{font-size:clamp(1.3rem,5vw,1.9rem);font-weight:800;margin:0}
+.lead{color:var(--muted);font-size:1.08rem;max-width:460px}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:420px;margin:22px 0}
+.cell{padding:12px 4px;text-align:center;border-radius:20px;transition:transform .6s}
+.cell b{display:block;font-size:clamp(1.5rem,6vw,2.2rem);color:var(--gold);line-height:1.2}
+.cell small{color:var(--muted);font-weight:600}
+.cell.flip{transform:rotateX(360deg)}
+.today{display:none;font-family:'Aref Ruqaa',serif;font-size:clamp(1.8rem,7vw,2.6rem);color:var(--rose);margin:22px 0}
+/* stage */
+.sw{width:100%;max-width:560px;margin:auto}
+.stage{position:relative;aspect-ratio:1/1;border-radius:34px;overflow:hidden;cursor:pointer;background:radial-gradient(circle at 50% 42%,#2e1240,#0a0512 75%);border:1px solid #ffd27a66;box-shadow:0 30px 80px #2a103055,inset 0 0 70px #ff8fb826}
+#c3d{position:absolute;inset:0;width:100%;height:100%;display:block}
+.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.chips button{font:600 .92rem 'Cairo',sans-serif;color:var(--text);background:var(--glass);border:1px solid var(--line);border-radius:50px;padding:6px 16px;cursor:pointer;transition:.3s}
+.chips button.on{background:linear-gradient(135deg,var(--gold),var(--rose));color:#2a1030;border-color:transparent;transform:scale(1.08)}
+/* sections */
+section{padding:80px 20px}
+.in{max-width:680px;margin:auto;text-align:center}
+h2{font-family:'Aref Ruqaa',serif;font-size:clamp(2rem,7vw,3.1rem);color:var(--gold);margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 30px}
+.reveal{opacity:0;transform:translateY(60px) rotateX(20deg);transition:1s cubic-bezier(.2,.8,.2,1)}
+.reveal.on{opacity:1;transform:none}
+.sky{display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(6px,2vw,14px);max-width:620px;margin:auto}
+.sky button{aspect-ratio:1;border:0;padding:0;cursor:pointer;font:800 clamp(.6rem,2.6vw,.95rem) 'Cairo',sans-serif;color:#2a1030;background:linear-gradient(145deg,var(--rose),var(--gold));clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);opacity:.5;animation:tw 2.6s ease-in-out infinite;animation-delay:calc(var(--i)*.17s);transition:.4s;padding-top:18%}
+.sky button:hover{opacity:.9;transform:scale(1.18) rotate(12deg)}
+.sky button.f{opacity:1;animation:none;background:linear-gradient(145deg,#fff3c4,var(--gold));transform:scale(1.08)}
+@keyframes tw{50%{opacity:.25;transform:scale(.85) rotate(-10deg)}}
+.panel{max-width:620px;margin:26px auto 0;padding:26px 22px;min-height:140px;display:flex;flex-direction:column;justify-content:center;perspective:700px}
+.panel small{color:var(--gold);font-weight:800;letter-spacing:1px}
+.panel p{margin:4px 0 0;font-size:clamp(1.15rem,4.4vw,1.5rem);font-weight:700}
+.panel.flip>*{animation:fl .7s cubic-bezier(.2,.8,.2,1)}
+@keyframes fl{from{opacity:0;transform:rotateX(-80deg) translateY(10px)}}
+.prog{height:6px;border-radius:6px;background:var(--line);max-width:620px;margin:16px auto 0;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--rose));transition:width .6s}
+.cnt{color:var(--muted);font-weight:600;margin-top:8px}
+.letter{padding:34px 26px;text-align:right;font-size:1.12rem}
+.letter b{color:var(--rose)}
+footer{text-align:center;padding:40px 20px 70px;color:var(--muted)}
+#conf{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+@media(max-width:860px){.hero{grid-template-columns:1fr;min-height:0;gap:28px;padding-top:36px;text-align:center}.lead,.cd{margin-inline:auto}.cd{margin-block:22px}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="txt">
+    <span class="chip">٢١ نوفمبر · يوم مميز</span>
+    <h1>بسنتوتي</h1>
+    <p class="hb">كل سنة وانتي طيبة يا نجمتي 🌙</p>
+    <p class="lead">يومك مش يوم عادي، ده اليوم الي اتولدة في اطيب و احن قلب في الدنيا دي كلها.</p>
+    <div class="cd" id="cd">
+      <div class="cell glass"><b id="dd">0</b><small>يوم</small></div>
+      <div class="cell glass"><b id="hh">0</b><small>ساعة</small></div>
+      <div class="cell glass"><b id="mm">0</b><small>دقيقة</small></div>
+      <div class="cell glass"><b id="ss">0</b><small>ثانية</small></div>
+    </div>
+    <div class="today" id="today">هانت فاضل علي عيد ميلادك ايام بس حبيت احتفل معاكي من دلوقتي! 🎉</div>
+    <a class="btn" href="#wishes">افتحي أمنياتك ↓</a>
+  </div>
+  <div class="sw">
+    <div class="stage" id="stage"><canvas id="c3d"></canvas></div>
+    <div class="chips" id="chips">
+      <button data-i="0" class="on">🌌 الكون</button><button data-i="1">✨ اسمك</button><button data-i="2">💗 قلب</button><button data-i="3">🎂 يومك</button>
+    </div>
+  </div>
+</header>
+
+<section id="wishes"><div class="in reveal">
+  <h2>٢١ نجمة · ٢١ أمنية</h2>
+  <p class="sub">لمسة على كل نجمة، وهتفتحلك أمنية مني ليكي</p>
+  <div class="sky" id="sky"></div>
+  <div class="panel glass" id="panel"><small id="pn">✨</small><p id="pt">اختاري أي نجمة وشوفي أمنيتك</p></div>
+  <div class="prog"><i id="bar"></i></div>
+  <div class="cnt" id="cnt">فتحتي ٠ من ٢١</div>
+</div></section>
+
+<section><div class="in reveal">
+  <h2>كلمتين من القلب</h2>
+  <div class="letter glass">
+    <p>كل سنة وأنتي طيبة يا بسنتوتي وعقبال مليون سنة، بصي زاي ما انتي عارفه انا مش بعرف اعبر اوي😅 و مهما قولت من كلام ده ولا حاجه فيكي .<br>
+    ربنا يكتب لك كل السعادة والنجاح في كل خطوة جاية لأنك تستاهلي أحسن حاجة في الدنيا بجد طيبة قلبك وجمال روحك بيخلوا أي مكان تكوني فيه منور وبيفرق مع كل اللي حواليكي.<br>
+    متخافيش من بكرة، ومهما الدنيا لفت بيكي افتكري دائمًا إنك مش لوحدك، وأنا هفضل جنبك وظهرك لحد آخر يوم في عمري.<br>
+  اخر حاجه احب اختم بيها أنتي لستي مجرد عابرة في رحلة الأيام، بل النور الذي ينير عتمة الطريق، وكل عام وأنتي الأقوى والأجمل يا بسنتوتي.🎂✨💖🎉💃🎈🌹🌟</p>
+    <p><b>كل سنة وانتي أحلى نجمة في سمايا ✨</b></p>
+  </div>
+</div></section>
+
+<footer>بالتوفيق في حياتك يا نجمتي 🌙</footer>
+<canvas id="conf"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+// ---------- confetti ----------
+const cv=$('conf'),cx=cv.getContext('2d');let ps=[],going=false;
+function boom(x,y,n){cv.width=innerWidth;cv.height=innerHeight;const k=['#ffd27a','#ff8fb8','#fff3c4','#c9a0ff','#ffffff'];
+ for(let i=0;i<n;i++)ps.push({x:x,y:y,vx:(Math.random()-.5)*(n>40?18:9),vy:-Math.random()*(n>40?18:8)-2,s:2+Math.random()*4,c:k[i%5],l:1});
+ if(!going){going=true;(function f(){cx.clearRect(0,0,cv.width,cv.height);
+  ps.forEach(p=>{p.vy+=.3;p.x+=p.vx;p.y+=p.vy;p.l-=.011;cx.globalAlpha=Math.max(p.l,0);cx.fillStyle=p.c;cx.beginPath();cx.arc(p.x,p.y,p.s,0,6.3);cx.fill()});
+  ps=ps.filter(p=>p.l>0&&p.y<cv.height+20);if(ps.length)requestAnimationFrame(f);else{going=false;cx.clearRect(0,0,cv.width,cv.height)}})()}}
+// ---------- 3D particle universe ----------
+try{
+const stage=$('stage'),R=new THREE.WebGLRenderer({canvas:$('c3d'),antialias:true,alpha:true});
+R.setPixelRatio(Math.min(devicePixelRatio,2));
+const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(50,1,.1,400);
+function size(){const w=stage.clientWidth,h=stage.clientHeight,a=w/h;R.setSize(w,h,false);C.aspect=a;C.position.z=41/Math.min(a,1);C.updateProjectionMatrix()}
+addEventListener('resize',size);size();
+const sc=document.createElement('canvas');sc.width=sc.height=64;const g=sc.getContext('2d'),gr=g.createRadialGradient(32,32,0,32,32,32);
+gr.addColorStop(0,'#fff');gr.addColorStop(.45,'rgba(255,255,255,.95)');gr.addColorStop(.75,'rgba(255,255,255,.3)');gr.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=gr;g.fillRect(0,0,64,64);
+const tex=new THREE.CanvasTexture(sc);
+const N=14000,pos=new Float32Array(N*3),col=new Float32Array(N*3),tgt=new Float32Array(N*3),from=new Float32Array(N*3),dl=new Float32Array(N);
+const pal=[0xff9ec0,0xffd27a,0xfff3e0,0xc9a0ff].map(h=>new THREE.Color(h));
+for(let i=0;i<N;i++){const c=pal[i%4];col.set([c.r,c.g,c.b],i*3);dl[i]=Math.random()*.35;
+ for(let j=0;j<3;j++)pos[i*3+j]=(Math.random()-.5)*70}
+const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.BufferAttribute(pos,3));geo.setAttribute('color',new THREE.BufferAttribute(col,3));
+const P=new THREE.Points(geo,new THREE.PointsMaterial({size:.3,map:tex,vertexColors:true,transparent:true,opacity:.92,depthWrite:false,blending:THREE.AdditiveBlending}));S.add(P);
+const bp=new Float32Array(1500);for(let i=0;i<500;i++){const r=70+Math.random()*60,a=Math.random()*6.28,b=Math.acos(2*Math.random()-1);bp.set([r*Math.sin(b)*Math.cos(a),r*Math.cos(b),r*Math.sin(b)*Math.sin(a)],i*3)}
+const bg=new THREE.BufferGeometry();bg.setAttribute('position',new THREE.BufferAttribute(bp,3));
+const BG=new THREE.Points(bg,new THREE.PointsMaterial({size:1.2,map:tex,transparent:true,opacity:.6,depthWrite:false,blending:THREE.AdditiveBlending}));S.add(BG);
+// shapes
+function galaxy(){const a=new Float32Array(N*3);for(let i=0;i<N;i++){const r=Math.pow(Math.random(),.6)*19+1,ang=r*.45+(i%3)*2.094+(Math.random()-.5)*3/Math.sqrt(r);
+ a[i*3]=Math.cos(ang)*r;a[i*3+2]=Math.sin(ang)*r;a[i*3+1]=(Math.random()-.5)*(3-r*.1)}return a}
+function heart(){const a=new Float32Array(N*3),hx=t=>16*Math.pow(Math.sin(t),3)*.95,hy=t=>(13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t))*.95+2,poly=[];
+ for(let j=0;j<240;j++){const t=j/240*6.2832;poly.push([hx(t),hy(t)])}
+ const inside=(x,y)=>{let c=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const A=poly[i],B=poly[j];if((A[1]>y)!==(B[1]>y)&&x<(B[0]-A[0])*(y-A[1])/(B[1]-A[1])+A[0])c=!c}return c};
+ for(let i=0;i<N;i++){let x,y,z;
+  if(Math.random()<.45){const t=Math.random()*6.2832,o=1-Math.random()*.04;x=hx(t)*o;y=(hy(t)-2)*o+2;z=(Math.random()-.5)*2.2}
+  else{do{x=(Math.random()-.5)*31;y=-16+Math.random()*29}while(!inside(x,y));z=(Math.random()-.5)*3.2}
+  a[i*3]=x;a[i*3+1]=y;a[i*3+2]=z}return a}
+function text(t,w){const W=1000,H=320,c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d');
+ let fs=200;x.textAlign='center';x.textBaseline='middle';x.direction='rtl';
+ do{x.font='700 '+fs+'px "Aref Ruqaa", Cairo, serif';fs-=6}while(x.measureText(t).width>880&&fs>60);
+ x.fillStyle='#fff';x.strokeStyle='#fff';x.lineWidth=7;x.lineJoin='round';x.strokeText(t,W/2,H/2);x.fillText(t,W/2,H/2);
+ const d=x.getImageData(0,0,W,H).data,p=[];let mnx=1e9,mxx=-1e9,mny=1e9,mxy=-1e9;
+ for(let y=0;y<H;y++)for(let i=0;i<W;i++)if(d[(y*W+i)*4+3]>140){p.push(i,y);if(i<mnx)mnx=i;if(i>mxx)mxx=i;if(y<mny)mny=y;if(y>mxy)mxy=y}
+ const k=w/(mxx-mnx),m=p.length/2,a=new Float32Array(N*3),cx=(mxx+mnx)/2,cy=(mxy+mny)/2;
+ for(let i=0;i<N;i++){const q=(Math.random()*m|0)*2;a[i*3]=(p[q]-cx+Math.random()-.5)*k;a[i*3+1]=-(p[q+1]-cy+Math.random()-.5)*k;a[i*3+2]=(Math.random()-.5)*1.4}return a}
+const shapes=[galaxy(),null,heart(),null];
+const ft=document.fonts?document.fonts.load('700 190px "Aref Ruqaa"','بسنتوتي ٢١ نوفمبر'):Promise.resolve();
+Promise.race([ft,new Promise(r=>setTimeout(r,2500))]).catch(()=>{}).then(()=>{shapes[1]=text('بسنتوتي',32);shapes[3]=text('٢١ نوفمبر',32)});
+// slow, timed morph: every dot travels from where it is to its exact spot, then holds still
+const DUR=6000,HOLD=6000;
+let idx=0,spin=0,tx=0,ty=0,px=0,py=0,vis=true,timer,mt=performance.now();
+function setShape(i){idx=i;from.set(pos);tgt.set(shapes[i]||shapes[0]);mt=performance.now();
+ if(i!==0){spin=((spin%6.2832)+6.2832)%6.2832;if(spin>3.1416)spin-=6.2832}
+ document.querySelectorAll('#chips button').forEach(b=>b.classList.toggle('on',+b.dataset.i===i))}
+function go(i){setShape(i);clearInterval(timer);timer=setInterval(()=>go((idx+1)%4),DUR+HOLD)}
+setShape(0);setTimeout(()=>go(1),7000);
+document.querySelectorAll('#chips button').forEach(b=>b.onclick=()=>go(+b.dataset.i));
+stage.onclick=()=>go((idx+1)%4);
+stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();tx=(e.clientX-r.left)/r.width-.5;ty=(e.clientY-r.top)/r.height-.5});
+new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(stage);
+function loop(t){requestAnimationFrame(loop);if(!vis)return;t*=.001;
+ const e=(performance.now()-mt)/DUR;
+ for(let i=0;i<N;i++){let u=(e-dl[i])/.65;u=u<0?0:u>1?1:u;const s=u*u*(3-2*u),k=i*3;
+  pos[k]=from[k]+(tgt[k]-from[k])*s;pos[k+1]=from[k+1]+(tgt[k+1]-from[k+1])*s;pos[k+2]=from[k+2]+(tgt[k+2]-from[k+2])*s}
+ geo.attributes.position.needsUpdate=true;
+ px+=(tx-px)*.06;py+=(ty-py)*.06;
+ const gal=idx===0;
+ spin+=gal?.004:-spin*.04;
+ P.rotation.y=spin+(gal?Math.sin(t*.5)*.25+px*.7:Math.sin(t*.4)*.05+px*.15);
+ P.rotation.x+=((gal?-.85:0)+py*(gal?.5:.1)-P.rotation.x)*.05;
+ BG.rotation.y=t*.02;R.render(S,C)}
+requestAnimationFrame(loop);
+}catch(e){$('stage').parentElement.style.display='none'}
+// ---------- countdown ----------
+let fired=false;
+function tick(){const n=new Date(),y=n.getFullYear();let T=new Date(y,10,21);
+ if(n>=new Date(y,10,22))T=new Date(y+1,10,21);
+ if(n>=new Date(y,10,21)&&n<new Date(y,10,22)){$('cd').style.display='none';$('today').style.display='block';if(!fired){fired=true;setTimeout(()=>boom(innerWidth/2,innerHeight/2,160),900)}return}
+ $('cd').style.display='grid';$('today').style.display='none';const d=T-n;
+ const v={dd:Math.floor(d/864e5),hh:Math.floor(d/36e5)%24,mm:Math.floor(d/6e4)%60,ss:Math.floor(d/1e3)%60};
+ for(const k in v){const e=$(k);if(e.textContent!=v[k]){e.textContent=v[k];const c=e.parentElement;c.classList.add('flip');setTimeout(()=>c.classList.remove('flip'),650)}}}
+tick();setInterval(tick,1000);
+// ---------- 21 wishes ----------
+const W=['تعدّي امتحاناتك بتفوق يبهر الكل','ضحكتك تفضل منوّرة أي مكان','راحة بال تغنيكي عن أي حاجة','كل حلم في دماغك يتحقق بإذن الله','صحة وعافية تكفّي سنتك كلها','أصحاب بجد جنبك في كل خطوة','فرحة بتفاجئك من غير ميعاد','أيام هادية وقلب مطمّن','نجاح بعد كل تعب بتتعبيه','سفرية حلوة تفتحلك الدنيا','رزق واسع وبركة في كل حاجة','ثقة في نفسك أكبر من أي خوف','ايام حلوه مع ناس بتحبيهم','تفضلي بسيطة وجميلة زي ما انتي','ذكريات جديدة تتحفظ في القلب','دعوة مستجابة في وقتها بالظبط','موهبة جواكي تظهر وتكسر الدنيا','طريق مفتوح قدامك من غير عقبات','حد يقدّر قيمتك زي ما تستاهلي','سنة أحلى من اللي فاتت بمراحل','وتفتكري دايماً إنك فعلاً استثنائية ✨'];
+const ar=n=>n.toLocaleString('ar-EG'),found=new Set(),sky=$('sky'),panel=$('panel');
+W.forEach((w,i)=>{const b=document.createElement('button');b.textContent=ar(i+1);b.style.setProperty('--i',i);b.setAttribute('aria-label','النجمة '+(i+1));
+ b.onclick=()=>{const r=b.getBoundingClientRect();b.classList.add('f');found.add(i);
+  $('pn').textContent='النجمة '+ar(i+1);$('pt').textContent=w;panel.classList.remove('flip');void panel.offsetWidth;panel.classList.add('flip');
+  $('bar').style.width=found.size/21*100+'%';$('cnt').textContent='فتحتي '+ar(found.size)+' من ٢١';
+  boom(r.left+r.width/2,r.top+r.height/2,18);
+  if(found.size===21)setTimeout(()=>{$('pn').textContent='الأمنية الأخيرة 🌙';$('pt').textContent='٢١ نجمة مش كفاية، انتي تستاهلي السما كلها. كل سنة وانتي طيبة يا بسنتوتي!';
+   panel.classList.remove('flip');void panel.offsetWidth;panel.classList.add('flip');boom(innerWidth/2,innerHeight/2,200)},900)};
+ sky.appendChild(b)});
+// ---------- reveal ----------
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
